@@ -1,13 +1,63 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0b0c10;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.header {
+  height: 140px;
+}
+.header-my-info {
+  background: rgb(30, 215, 96);
+  background: linear-gradient(
+    180deg,
+    rgba(30, 215, 96, 0.4918912394662921) 0%,
+    rgba(44, 83, 63, 0.5930148349719101) 47%,
+    rgba(11, 12, 16, 1) 100%
+  );
+}
+.lh-text-green {
+  color: #1ed760;
+}
+.lh-text-gray {
+  color: #c5c6c8;
+}
+lh-bg-gray {
+  background-color: #c4c4c4;
+}
+.content {
+  height: calc(100vh - 140px);
+}
+.lh-card-purple {
+  width: 300px;
+  min-width: 300px;
+  background: rgb(68, 49, 141);
+  background: linear-gradient(
+    180deg,
+    rgba(68, 49, 141, 1) 0%,
+    rgba(44, 83, 63, 0.5930148349719101) 47%,
+    rgba(11, 12, 16, 1) 100%
+  );
+}
+.lh-card-pink {
+  width: 300px;
+  min-width: 300px;
+  background: rgb(217, 63, 135);
+  background: linear-gradient(
+    180deg,
+    rgba(217, 63, 135, 1) 0%,
+    rgba(44, 83, 63, 0.5930148349719101) 47%,
+    rgba(11, 12, 16, 1) 100%
+  );
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
