@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -30,11 +33,15 @@ code {
 .lh-text-gray {
   color: #c5c6c8;
 }
-lh-bg-gray {
+.lh-bg-gray {
   background-color: #c4c4c4;
 }
 .content {
-  height: calc(100vh - 140px);
+  height: calc(100vh - 128px);
+}
+.lh-p-10{
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 .lh-card-purple {
   width: 300px;
@@ -58,6 +65,8 @@ lh-bg-gray {
     rgba(11, 12, 16, 1) 100%
   );
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+.display-linebreak {
+  white-space: pre-line;
+}
+
