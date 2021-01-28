@@ -38,7 +38,7 @@ export default class Lyrics extends Component {
     return (
       <div className="flex flex-col w-full justify-around relative">
         <div className="flex flex-col h-full items-center">
-          <p className="lh-text-gray display-linebreak text-3xl py-10">
+          <p className="lyrics-card text-black text-center display-linebreak text-3xl my-10 px-20 pt-10 rounded-md">
             {this.state.lyrics}{" "}
           </p>
         </div>
