@@ -26,7 +26,7 @@ export default class Lyrics extends Component {
         if (res.data.lyrics !== "") {
           this.setState({ lyrics: res.data.lyrics });
         } else {
-          this.setState({ lyrics: "Lyrics could be found in the library" });
+          this.setState({ lyrics: "Lyrics could not be found in the library" });
         }
       })
       .catch((err) => {
@@ -34,17 +34,16 @@ export default class Lyrics extends Component {
       });
   };
   render() {
-    console.log(this.props);
     return (
-      <div className="flex flex-col w-full justify-around relative">
+      <div className="flex flex-col w-full justify-center items-center px-2">
+        <div className="flex flex-col w-full md:2/3 lg:w-1/2 border-b border-gray-500 p-4 shadow-sm rounded-md lyrics-header mt-4">
+          <span className="lh-text-gray text-xl font-bold">{this.state.song}</span>
+          <span className="lh-text-gray font-semibold">Artist: {this.state.artist}</span>
+        </div>
         <div className="flex flex-col h-full items-center">
-          <p className="lyrics-card text-black text-center display-linebreak text-3xl my-10 px-20 pt-10 rounded-md">
+          <p className="lyrics-card text-white text-center display-linebreak md:text-2xl lg:text-3xl mt-4 md:px-10 lg:px-20 pt-10 pb-4 rounded-md">
             {this.state.lyrics}{" "}
           </p>
-        </div>
-        <div className="fixed left-0 flex flex-col">
-          <span className="lh-text-gray">{this.state.song}</span>
-          <span className="lh-text-gray">{this.state.artist}</span>
         </div>
       </div>
     );

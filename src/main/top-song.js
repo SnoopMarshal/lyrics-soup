@@ -45,13 +45,13 @@ let songList = [
 export default class TopSong extends Component {
   render() {
     return (
-      <div className="flex flex-col justify-center items-center w-full mt-10 px-40">
-        <div className="w-5/6 justify-start items-start mb-4">
+      <div className="flex flex-col justify-center items-center w-full mt-10 lg:px-20">
+        <div className="w-full lg:w-5/6 justify-start items-start mb-4">
           <span className="lh-text-gray font-semibold text-xl">
             Top searched songs
           </span>
         </div>
-        <div className="w-5/6 flex justify-between items-center ">
+        <div className="w-full xl:w-5/6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 items-center gap-4">
           {songList.map((o, i) => {
             return (
               <SongCard
