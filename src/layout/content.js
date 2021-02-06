@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import TopArtist from "../main/top-artist";
 import TopSong from "../main/top-song";
-import SearchIcon from "@material-ui/icons/Search";
 import axios from "axios";
 import LyricsList from "../main/lyricsList";
+import AutoComplete from "../main/autoComplete";
 export default class Content extends Component {
   state = {
     title: "",
@@ -33,21 +33,7 @@ export default class Content extends Component {
   render() {
     return (
       <div className="flex flex-col h-full w-full justify-around px-2">
-        <form
-          className="flex justify-center items-center w-full px-0 md:px-20 xl:px-40 mt-10"
-          onSubmit={this.handleSubmit}
-        >
-          <input
-            type="text"
-            onChange={this.handleChange}
-            required
-            className="w-full md:w-3/5 lg:w-2/5  lh-bg-gray rounded-full pl-4 py-2 focus:outline-none text-lg"
-            placeholder="search by artist or song title"
-          />
-          <button type="submit" className="focus:outline-none ml-4">
-            <SearchIcon className="text-white" />
-          </button>
-        </form>
+        <AutoComplete/>
         <div className="flex justify-center">
           <LyricsList lyricsList={this.state.lyricsList} />
         </div>

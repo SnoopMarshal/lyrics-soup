@@ -6,8 +6,8 @@ export default class SongCard extends Component {
   render() {
     const { title, album, artist, imageUrl, colorScheme } = this.props;
     return (
-      <Link to={`/${artist}/${title}`}>
-        <div className={`flex lh-card-${colorScheme} w-full py-12 px-4 items-center`}>
+      <Link className="h-full" to={`/${artist}/${title}`}>
+        <div className={`flex lh-card-${colorScheme} w-full py-12 px-4 items-center h-full`}>
           <div className="flex w-1/3 rounded-full">
             <img
               srcSet=""

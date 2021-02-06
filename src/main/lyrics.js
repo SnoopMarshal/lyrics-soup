@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import AutoComplete from "./autoComplete";
 export default class Lyrics extends Component {
   state = {
     song: null,
@@ -35,15 +36,22 @@ export default class Lyrics extends Component {
   };
   render() {
     return (
-      <div className="flex flex-col w-full justify-center items-center px-2">
-        <div className="flex flex-col w-full md:2/3 lg:w-1/2 border-b border-gray-500 p-4 shadow-sm rounded-md lyrics-header mt-4">
-          <span className="lh-text-gray text-xl font-bold">{this.state.song}</span>
-          <span className="lh-text-gray font-semibold">Artist: {this.state.artist}</span>
-        </div>
-        <div className="flex flex-col h-full items-center">
-          <p className="lyrics-card text-white text-center display-linebreak md:text-2xl lg:text-3xl mt-4 md:px-10 lg:px-20 pt-10 pb-4 rounded-md">
-            {this.state.lyrics}{" "}
-          </p>
+      <div className="flex flex-col w-full justify-around px-2">
+        {/* <AutoComplete /> */}
+        <div className="flex flex-col w-full justify-items-center items-center">
+          <div className="flex flex-col w-full md:2/3 lg:w-1/2 border-b border-gray-500 p-4 shadow-sm rounded-md lyrics-header mt-4">
+            <span className="lh-text-gray text-xl font-bold">
+              {this.state.song}
+            </span>
+            <span className="lh-text-gray font-semibold">
+              Artist: {this.state.artist}
+            </span>
+          </div>
+          <div className="flex flex-col h-full items-center w-full md:2/3 lg:w-1/2">
+            <p className="w-full lyrics-card text-white text-center display-linebreak md:text-2xl lg:text-3xl mt-4 pt-10 pb-4 rounded-md">
+              {this.state.lyrics}{" "}
+            </p>
+          </div>
         </div>
       </div>
     );

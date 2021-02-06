@@ -3,11 +3,11 @@ import SongCard from "./song-card";
 let songList = [
   {
     colorScheme: "purple",
-    title: "Hey Jude",
-    artist: "The Beetles",
-    album: "60's Party Hits Music",
+    title: "High hopes",
+    artist: "Kodaline",
+    album: "In A Perfect World (Expanded Edition)",
     imageUrl:
-      "https://cdn-images.deezer.com/images/cover/ea0b35388df87554a3013ad31d3edcd7/250x250-000000-80-0-0.jpg",
+      "https://cdn-images.deezer.com/images/cover/ae1ef143dd6852df87eefe8a405c091b/250x250-000000-80-0-0.jpg",
   },
   {
     colorScheme: "pink",
