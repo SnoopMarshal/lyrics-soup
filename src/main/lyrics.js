@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import AutoComplete from "./autoComplete";
 export default class Lyrics extends Component {
   state = {
     song: null,
