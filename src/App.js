@@ -1,6 +1,8 @@
 import './App.css';
 import Home from './main/home';
 import logo from "./../src/assets/song_logo.svg"
+import firebase from "./firebase";
+
 
 function App() {
   return (
